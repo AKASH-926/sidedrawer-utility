@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a014ad7a28.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        background-color: gainsboro;
+    }
+
+    #side-bar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        right: -204px;
+        box-shadow: -2px 0px 8px black;
+        width: 200px;
+        transition: right 0.6s;
+        background-image: linear-gradient(to right, #16acc1, #ffff);
+        z-index: 500;
+    }
+
+    #side-bar.open {
+        right: 0;
+    }
+
+    .contents {
+        position: relative;
+
+    }
+
+    .open-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        position: absolute;
+        padding: 10px;
+        top: 50vh;
+        right: 175px;
+        transition: right 0.6s;
+        height: 30px;
+        width: 80px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-color: white;
+        rotate: 270deg;
+        background-color: #16acc1;
+        color: #ffff;
+        cursor: pointer;
+    }
+
+    .open-btn>i {
+        color: #ffff;
+        margin-left: 8px;
+        border-radius: 2px solid;
+        background-color: #16acc1;
+    }
+
+    .arrow-collapse {
+        rotate: 180deg;
+    }
+
+    .side-bar-header {
+        text-align: end;
+        font-size: 0.7rem;
+        padding: 5px;
+        margin-bottom: 13%;
+        background-color: #16acc1;
+        color: #ffff;
+        cursor: pointer;
+    }
+
+    .card-container {
+        overflow-y: auto;
+        height: 87vh;
+        scroll-behavior: smooth;
+    }
+
+    .card-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cards-sec-1 {
+        border: 1px solid;
+        padding: 5%;
+        margin: 0% 5% 0 5%;
+        background-color: #215f68;
+        color: #ffff;
+    }
+
+    .card-head-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-head {
+        font-size: 0.8rem;
+    }
+
+    .card-details {
+        font-size: 0.6rem;
+        color: white;
+
+    }
+
+    .card-offer-wrap {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .card-shop {
+        text-align: end;
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+
+    .card-sec-2 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7rem;
+        background-color: #ffff;
+        color: #215f68;
+        margin: 0 5% 5% 5%;
+        padding: 10px;
+        border-radius: 2px solid #b4afaf;
+        font-weight: 600;
+    }
+
+    #up-arrow {
+        position: absolute;
+        left: 50%;
+        top: 28px;
+        color: #ffff;
+        cursor: pointer;
+    }
+
+    #down-arrow {
+        position: absolute;
+        left: 50%;
+        bottom: -5%;
+        color: #ffff;
+        cursor: pointer;
+    }
+
+    .vist-page-wrap {
+        border: 1px solid #ffff;
+        background-color: #ff7700;
+        padding: 5%;
+        margin: 0 5% 0 5%;
+    }
+
+    .vist-page-wrap>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffff;
+
+    }
+
+    .vist-page-wrap>div>p:first-child {
+        font-size: 0.7rem;
+    }
+
+    .vist-page-wrap>div>p:last-child {
+        font-size: 0.7rem;
+        margin-top: 2%;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+
+    <div id="side-bar">
+        <div class="contents">
+            <div class="open-btn">
+                DEALS <i class=" fa-solid fa-circle-chevron-up fa-sm arrow" style="--fa-primary-color:#16acc1"></i>
+
+            </div>
+            <div class="side-bar-header"> VIEW ALL DEALS &#62;</div>
+            <div id="up-arrow"><i class="fa-solid fa-chevron-up fa-xl"></i></div>
+            <div id="down-arrow"><i class="fa-solid fa-chevron-down fa-xl"></i></div>
+            <div class="card-container">
+
+                <div class="coupon-cards">
+                    <div class="cards-sec-1 ">
+                        <div class="card-head-wrap">
+                            <p class="card-head">PHOTO PUZZLES</p>
+                            <a href="#" class="card-details">Details</a>
+                        </div>
+                        <div class="card-offer-wrap">
+                            <p>60% off</p>
+                        </div>
+                        <div class="card-shop">
+                            <p>SHOP &#62</p>
+                        </div>
+                    </div>
+                    <div class="card-sec-2 ">
+                        <p>CODE: F8H6RT67</p>
+                        <p>COPY CODE</p>
+                    </div>
+                </div>
+                <div class="coupon-cards">
+                    <div class="cards-sec-1">
+                        <div class="card-head-wrap">
+                            <p class="card-head">PHOTO MAGNETS</p>
+                            <a href="#" class="card-details">Details</a>
+                        </div>
+                        <div class="card-offer-wrap">
+                            <p>60% off</p>
+                        </div>
+                        <div class="card-shop">
+                            <p>SHOP &#62</p>
+                        </div>
+                    </div>
+                    <div class="card-sec-2 ">
+                        <p>CODE: F8H6RT67</p>
+                        <p>COPY CODE</p>
+                    </div>
+                </div>
+                <div class="coupon-cards">
+                    <div class="cards-sec-1">
+                        <div class="card-head-wrap">
+                            <p class="card-head">TOTE BAGS</p>
+                            <a href="#" class="card-details">Details</a>
+                        </div>
+                        <div class="card-offer-wrap">
+                            <p>60% off</p>
+                        </div>
+                        <div class="card-shop">
+                            <p>SHOP &#62</p>
+                        </div>
+                    </div>
+                    <div class="card-sec-2 ">
+                        <p>CODE: F8H6RT67</p>
+                        <p>COPY CODE</p>
+                    </div>
+                </div>
+                <div class="coupon-cards">
+                    <div class="cards-sec-1">
+                        <div class="card-head-wrap">
+                            <p class="card-head">PHOTO MUGS</p>
+                            <a href="#" class="card-details">Details</a>
+                        </div>
+                        <div class="card-offer-wrap">
+                            <p>60% off</p>
+                        </div>
+                        <div class="card-shop">
+                            <p>SHOP &#62</p>
+                        </div>
+                    </div>
+                    <div class="card-sec-2 ">
+                        <p>CODE: F8H6RT67</p>
+                        <p>COPY CODE</p>
+                    </div>
+                </div>
+                <div class="vist-page-wrap">
+                    <div class="vist">
+                        <p>VISIT OUR </p>
+                        <p>DEALS PAGE </p>
+                        <p>SEE ALL DEALS &#62</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <script>
+            const open = document.querySelector(".open-btn")
+            const arrow = document.querySelector('.arrow')
+            const sideBar = document.querySelector("#side-bar")
+            const upArrow = document.querySelector("#up-arrow")
+            const downArrow = document.querySelector("#down-arrow")
+            const cardCont = document.getElementsByClassName('card-container')
+            let scrollval = 0
+            open.addEventListener('click', () => {
+                sideBar.classList.toggle('open')
+                arrow.classList.toggle('arrow-collapse')
+            })
+
+            upArrow.addEventListener('click', () => {
+                scrollval += 20
+                cardCont[0].scroll(scrollval, scrollval + 20)
+            })
+            downArrow.addEventListener('click', () => {
+                if (scrollval > 0) {
+                    scrollval -= 20
+                    cardCont[0].scroll(scrollval, scrollval - 20)
+                }
+
+            })
+        </script>
+
+</body>
+
+</html>
